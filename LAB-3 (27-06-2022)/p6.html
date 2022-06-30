@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var str = prompt("Enter String");
+      var len = str.length;
+      for (var m = 1; m < len; m++) {
+        if (
+          str.charAt(m) == "a" ||
+          str.charAt(m) == "e" ||
+          str.charAt(m) == "i" ||
+          str.charAt(m) == "o" ||
+          str.charAt(m) == "u"
+        ) {
+          console.log(m);
+          break;
+        }
+      }
+      for (var n = len; n < 1; n--) {
+        if (
+          str.charAt(m) == "a" ||
+          str.charAt(m) == "e" ||
+          str.charAt(m) == "i" ||
+          str.charAt(m) == "o" ||
+          str.charAt(m) == "u"
+        )
+          console.log(n);
+        break;
+      }
+      alert(str.substring(m + 1, n - 1));
+    </script>
+  </body>
+</html>

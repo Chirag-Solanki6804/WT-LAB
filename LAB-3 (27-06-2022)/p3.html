@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = parseInt(prompt("enter number two digit number")); //23
+      if (a > 99) {
+        alert("please two digit number");
+      }
+      let firstdigit = parseInt(a / 10); //2
+      let lastdigit = parseInt(a % 10); //3
+      sum = 1;
+      while (lastdigit != 0) {
+        var sum = parseInt(sum * firstdigit);
+        lastdigit--;
+      }
+      alert(sum);
+    </script>
+  </body>
+</html>
