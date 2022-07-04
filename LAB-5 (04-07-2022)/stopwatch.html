@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="output"></h1>
+    <button class="b1" onclick="start()">START TIME</button>
+    <button class="b2" onclick="stop()">STOP TIME</button>
+    <button class="b3" onclick="reset()">RESET TIME</button>
+
+        
+    </button>
+    <script>
+        setInterval(() => {
+            start();
+        },1000);
+        function start(){
+            var today = new Date();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            document.getElementById("output").innerHTML=time;
+        }
+        function stop(){
+            time= today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        }
+        function reset(){
+            document.getElementById("output").innerHTML=0;
+        }
+    </script>
+</body>
+</html>

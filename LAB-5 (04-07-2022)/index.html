@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+    padding: 0%;
+    margin: 0%;
+    }
+    table{
+        width: 50%;
+    }
+    .btn{
+        align: center;
+        width: 5vh;
+        height: 5vh;
+        border-radius:1em;
+    }
+    num1 num2{
+        width: 50%;
+    }
+    </style>
+</head>
+<body>
+    <input type="textbox" id="num1" placeholder="number 1">
+    <br>
+    <input type="textbox" id="num2" placeholder="number 2">
+    <br>
+    <button onclick="op(this)" class="btn">+</button>
+    <button onclick="op(this)" class="btn">-</button>
+    <button onclick="op(this)" class="btn">*</button>
+    <button onclick="op(this)" class="btn">/</button>
+    <br>
+    <h1 id="ans"></h1>
+    <script>
+        function op(b){
+            no1=parseInt(document.getElementById("num1").value);
+            no2=parseInt(document.getElementById("num2").value);
+            if(b.innerHTML=='+'){
+                ans=no1+no2;
+                document.getElementById("ans").innerHTML=ans;
+            }
+            if(b.innerHTML=='-'){
+                ans=no1-no2;
+                document.getElementById("ans").innerHTML=ans;
+            }
+            if(b.innerHTML=='*'){
+                ans=no1*no2;
+                document.getElementById("ans").innerHTML=ans;
+            }
+            if(b.innerHTML=='/'){
+                ans=no1/no2;
+                document.getElementById("ans").innerHTML=ans;
+            }
+        }
+    </script>
+</body>
+</html>
