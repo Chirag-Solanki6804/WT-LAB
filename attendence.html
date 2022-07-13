@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Attendence sheet</title>
+    <style type="text/css">
+        body{
+            background: skyblue;
+            box-shadow: transparent;
+            box-decoration-break: 
+        }
+        
+        .box
+    {
+        box-sizing: border-box;
+        width: 500px;
+        height: 300px;
+        border: 1px solid darkred;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: blueviolet;
+        box-shadow: 0px 0px 70px 9x rgba(0,0,0,0.5);
+        
+    }
+    .box:hover{
+        background-color: #ebebdd;
+
+    }
+    #ck{
+        padding: 10px;
+        border-color: #960566;
+        background-color: #f5f2f4;
+        border-radius: 10px;
+        position: fixed;
+        left: 7%;
+        font-size: 15px;
+        font-family: sans-serif;
+    }
+    #ck:hover{
+        background-color: ghostwhite;
+        border: 2px solid black;
+    }
+    #uk{
+        padding: 10px;
+        border-color: #960566;
+        background-color: #f5f2f4;
+        border-radius: 10px;
+        position: fixed;
+        left: 20%;
+        font-size: 15px;
+        font-family: sans-serif;
+    }
+     #uk:hover{
+
+         background-color: #ebebdd;
+         border: 1px solid black;
+     }
+      #ck:hover{
+    
+         background-color: #ebebdd;
+         border: 1px solid black;
+     }
+     
+
+     input[type=checkbox]{
+         width: 20px;
+         height: 20px;
+         margin-top: 10px;
+     }
+     div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 10s;
+}
+
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+     </style>
+    </head>
+     <body>
+       <button onclick="checkall() ,ans()"id="ck" >Checked all</button>
+       <button onclick="uncheckall(), ans()"id="uk" >Unchecked all</button>           
+      
+       <div class="box" id="ans">
+
+       </div>
+
+     <script>
+       var temp=document.getElementsByTagName("input");
+       var temp2=document.getElementById("ans");
+
+       for(i=101 ;i<=166 ; i++ ){
+           document.write("<input type='checkbox' value="+i+" onclick=ans()>"+i+"</br>");
+       }
+       for(i=201 ; i<=286 ; i++){
+           document.write("<input type='checkbox' value="+i+" onclick=ans()>"+i+"</br>");
+       }
+       for(i=301 ; i<=366 ; i++){
+           document.write("<input type='checkbox' value="+i+" onclick=ans()>"+i+"</br>");
+       }
+
+       function checkall(){
+           for(i=0 ; i<temp.length ; i++){
+           console.log(temp[i]);
+           temp[i].checked=true;
+       }
+    } 
+           
+       function uncheckall(){
+           for(i=0 ; i<temp.length ; i++){
+           console.log(temp[i]);
+           temp[i].checked=false;
+       }
+    } 
+      function ans(){
+          temp2.innerHTML="";
+          for(i=0 ; i<temp.length ; i++){
+          if(temp[i].checked==false){
+              temp2.innerHTML+=temp[i].value+", "; 
+          }
+      }
+      temp2.innerHTML=temp2.innerHTML.substring(0,temp2.innerHTML.length-2);
+    }
+
+       </script>
+</body>
+</html>
